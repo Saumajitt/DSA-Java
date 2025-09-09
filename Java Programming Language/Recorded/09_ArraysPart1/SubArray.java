@@ -5,23 +5,24 @@ public class SubArray {
     }
 
     static void printSubArrays(int[] arr){
-        // int ts = 0;
+        int maxSum = Integer.MIN_VALUE;
         for(int i = 0; i<arr.length; i++){
             int start = i;
             for(int j = i; j<arr.length; j++){
                 int end = j;
+                int sum =0;
                 for(int k = start; k<=end; k++){
-                    // int sum = 0;
-                    // sum += arr[k];
-                    System.out.print(arr[k] + " ");
-                    // int sum = 0;
-                    // sum += arr[k];
-                    // System.out.println(sum);
+                    sum += arr[k];
+                    System.out.print(arr[k] + " ");  
                 }
                 // ts++;
-                System.out.println();
+                System.out.println(" Sum: " + sum);
+                if(sum > maxSum){
+                    maxSum = sum;
+                }
             }
             System.out.println();
+            System.out.println("The maximum Subarray Sum = " + maxSum);
         }
 
     }
