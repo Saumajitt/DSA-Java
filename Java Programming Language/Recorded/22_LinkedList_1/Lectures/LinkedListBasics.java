@@ -62,7 +62,7 @@ class LinkedList {
         // step 2 ---> newNode next = head
         newNode.next = head;
 
-        // step 3 ---> head will be pointing to the new node in the front
+        // step 3 ---> head will be pointing to the new node that was inserted in the front
         head = newNode;
     }
 
